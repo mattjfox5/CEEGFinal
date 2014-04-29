@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 
-public class Instructions extends ActionBarActivity {
+public class Settings1 extends ActionBarActivity {
 
 	
 
@@ -19,7 +19,7 @@ public class Instructions extends ActionBarActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.instructions, menu);
+		getMenuInflater().inflate(R.menu.settings1, menu);
 		return true;
 	}
 
@@ -43,7 +43,7 @@ public class Instructions extends ActionBarActivity {
 		public PlaceholderFragment() {
 		}
 
-	
+		
 	}
 
 }

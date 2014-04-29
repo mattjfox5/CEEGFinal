@@ -26,6 +26,10 @@
             android:name="com.matthew.ceegfinal.Instructions"
             android:label="@string/title_activity_instructions" >
         </activity>
+        <activity
+            android:name="com.matthew.ceegfinal.Settings1"
+            android:label="@string/title_activity_settings1" >
+        </activity>
     </application>
 
 </manifest>

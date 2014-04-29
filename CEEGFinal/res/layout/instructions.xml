@@ -6,37 +6,24 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.matthew.ceeg.Disclaimer$PlaceholderFragment" >
+    tools:context="com.matthew.ceeg.MainActivity$PlaceholderFragment" >
 
     <TextView
-        android:id="@+id/disclaimer"
+        android:id="@+id/Instructions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:text="Disclaimer Text" />
+        android:layout_marginTop="128dp"
+        android:text="Instructions" />
 
     <Button
-        android:id="@+id/agree"
+        android:id="@+id/Continue01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
-        android:textSize="16dp"
-        android:text="I agree to the terms and conditions" 
-   		/>
-
-       <Button
-        android:id="@+id/fullText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="150dp"
-        android:textSize="16dp"
-        android:text="See full text of paper" 
-        />
+        android:layout_marginBottom="69dp"
+        android:text="Continue" />
 
 </RelativeLayout>
