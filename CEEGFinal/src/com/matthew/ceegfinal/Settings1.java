@@ -13,8 +13,13 @@ import android.os.Build;
 
 public class Settings1 extends ActionBarActivity {
 
-	
+	 @Override
+	    protected void onCreate(Bundle savedInstanceState) {
+	        super.onCreate(savedInstanceState);
+	        setContentView(R.layout.settings1);
 
+	        
+	 }
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
