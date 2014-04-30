@@ -32,6 +32,10 @@ public class Instructions extends ActionBarActivity {
 					
 				}
 	 });
+	       
+	        
+	        
+	    
 	 }
 	
 	@Override
