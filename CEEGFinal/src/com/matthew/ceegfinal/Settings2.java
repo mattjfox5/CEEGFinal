@@ -14,51 +14,31 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.os.Build;
 
-public class Settings1 extends ActionBarActivity {
+public class Settings2 extends ActionBarActivity {
 
-	 @Override
-	    protected void onCreate(Bundle savedInstanceState) {
-	        super.onCreate(savedInstanceState);
-	        setContentView(R.layout.settings1);
-	        Button Back01 = (Button) findViewById(R.id.Back01);
-	        Button Continue02 = (Button) findViewById (R.id.Continue02);
-	        
-	        Back01.setOnClickListener(new OnClickListener() {
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.settings2);
+		Button Back02 = (Button) findViewById(R.id.Back02);
+		
+		Back02.setOnClickListener(new OnClickListener(){
 
-				@Override
-				public void onClick(View v) {
-					Intent iii = new Intent (Settings1.this, Instructions.class);
-					startActivity(iii);
-					
-				}
+			@Override
+			public void onClick(View v) {
+			Intent i = new Intent (Settings2.this, Settings1.class);
+			startActivity(i);
 				
-				
-				
-	        });
-			Continue02.setOnClickListener (new OnClickListener() {
-
-				@Override
-				public void onClick(View v) {
-					Intent iiii = new Intent (Settings1.this, Settings2.class);
-					startActivity(iiii);
-					
-				}
-				
-			});
-
-	        
-	        	
-	        	
-	        	
-	       
-	 }
-	        
-	        
+			}
+		
+		});
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.settings1, menu);
+		getMenuInflater().inflate(R.menu.settings2, menu);
 		return true;
 	}
 
