@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RadioGroup;
 import android.os.Build;
 
 public class Settings1 extends ActionBarActivity {
@@ -22,12 +23,17 @@ public class Settings1 extends ActionBarActivity {
 	        setContentView(R.layout.settings1);
 	        Button Back01 = (Button) findViewById(R.id.Back01);
 	        Button Continue02 = (Button) findViewById (R.id.Continue02);
+	        final RadioGroup ssGroup = (RadioGroup)findViewById (R.id.ssGroup);
+	        
+	        ssGroup.check(R.id.radio2);
+	        
 	        
 	        Back01.setOnClickListener(new OnClickListener() {
 
 				@Override
 				public void onClick(View v) {
 					Intent iii = new Intent (Settings1.this, Instructions.class);
+
 					startActivity(iii);
 					
 				}
@@ -40,6 +46,7 @@ public class Settings1 extends ActionBarActivity {
 				@Override
 				public void onClick(View v) {
 					Intent iiii = new Intent (Settings1.this, Settings2.class);
+					iiii.putExtra("score", findScore(ssGroup.getCheckedRadioButtonId()));
 					startActivity(iiii);
 					
 				}
@@ -84,5 +91,23 @@ public class Settings1 extends ActionBarActivity {
 
 		
 	}
+	
+	public double findScore(int id) {
+		switch(id){
+		case R.id.radio0:
+			return .1;
+		case R.id.radio1:
+			return .15;
+		case R.id.radio2:
+			return .2;
+		case R.id.ee:
+			return .25;
+		case R.id.eee:
+			return .35;
+		case R.id.eeee:
+			return .45;
+		}
+		return -1;
+	} 
 
 }

@@ -7,5 +7,6 @@
     <string name="title_activity_instructions">Instructions</string>
     <string name="title_activity_settings1">Settings1</string>
     <string name="title_activity_settings2">Settings2</string>
+    <string name="title_activity_options">Options</string>
 
 </resources>

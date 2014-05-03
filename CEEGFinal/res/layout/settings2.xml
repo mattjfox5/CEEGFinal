@@ -8,34 +8,82 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.matthew.ceegfinal.Settings2$PlaceholderFragment" >
 
+    <Switch
+        android:id="@+id/CSP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/IED"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="Clinical Seizures Prior"
+        android:textOff="NO"
+        android:textOn="YES" />
+
+    <Switch
+        android:id="@+id/IED"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/CSP"
+        android:layout_below="@+id/Age"
+        android:layout_marginTop="28dp"
+        android:text="Interictal Epileptiform Discharges"
+        android:textOff="NO"
+        android:textOn="YES" />
+
+    <Switch
+        android:id="@+id/Age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/IED"
+        android:layout_marginTop="49dp"
+        android:text="Age"
+        android:textOff="&lt; 2"
+        android:textOn="> 2" />
+
     <Button
-        android:id="@+id/Calulate"
+        android:id="@+id/Calc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="78dp"
-        android:layout_marginRight="32dp"
+        android:layout_alignRight="@+id/spinner1"
+        android:layout_marginBottom="74dp"
         android:text="Calculate" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Calc"
+        android:layout_marginBottom="64dp"
+        android:layout_toLeftOf="@+id/Calc"
+        android:text="EEG Background"
+        android:textSize="20dp" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/Calc"
+        android:textSize="12dp" />
 
     <Button
         android:id="@+id/Back02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/Calulate"
-        android:layout_alignBottom="@+id/Calulate"
-        android:layout_marginLeft="23dp"
+        android:layout_below="@+id/spinner1"
+        android:layout_centerHorizontal="true"
         android:text="Back" />
 
     <TextView
-        android:id="@+id/settings2Text"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="55dp"
-        android:text="Please enter the remainder of the settings"
-        android:textSize="15dp" />
+        android:layout_alignBottom="@+id/Age"
+        android:layout_alignRight="@+id/Back02"
+        android:layout_marginBottom="32dp"
+        android:text="EEG Background"
+        android:textSize="20dp" />
 
 </RelativeLayout>

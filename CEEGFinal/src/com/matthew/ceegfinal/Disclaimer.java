@@ -1,5 +1,6 @@
 package com.matthew.ceegfinal;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -17,7 +18,6 @@ public class Disclaimer extends ActionBarActivity {
 	    protected void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
 	        setContentView(R.layout.disclaimer);
-	        
 	        Button agree = (Button) findViewById(R.id.agree);
 	        
 	        agree.setOnClickListener(new View.OnClickListener() {

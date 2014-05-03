@@ -39,14 +39,13 @@
         android:textSize="20dp" />
 
     <RadioGroup
-        android:id="@+id/radioGroup1"
+        android:id="@+id/ssGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:textSize="12dp"
-        >
+        android:textSize="12dp" >
 
         <RadioButton
             android:id="@+id/radio0"
@@ -67,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="59%/81%(Recommended)" />
+            android:text="59%/81% (Recommended)" />
         
         <RadioButton
             android:id="@+id/ee"
@@ -98,7 +97,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/radioGroup1"
+        android:layout_below="@+id/ssGroup"
         android:layout_marginTop="28dp"
         android:text="Continue" />
 
