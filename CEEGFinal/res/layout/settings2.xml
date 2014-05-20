@@ -16,8 +16,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
         android:text="Clinical Seizures Prior"
-        android:textOff="NO"
-        android:textOn="YES" />
+        android:textOff="     NO      "
+        android:textOn="     YES     " />
 
     <Switch
         android:id="@+id/IED"
@@ -38,8 +38,8 @@
         android:layout_alignRight="@+id/IED"
         android:layout_marginTop="49dp"
         android:text="Age"
-        android:textOff="&lt; 2"
-        android:textOn="> 2" />
+        android:textOff="      &lt;2     "
+        android:textOn="      > 2       " />
 
     <Button
         android:id="@+id/Calc"
@@ -60,14 +60,6 @@
         android:text="EEG Background"
         android:textSize="20dp" />
 
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/Calc"
-        android:textSize="12dp" />
-
     <Button
         android:id="@+id/Back02"
         android:layout_width="wrap_content"
@@ -85,5 +77,13 @@
         android:layout_marginBottom="32dp"
         android:text="EEG Background"
         android:textSize="20dp" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CSP"
+        android:layout_alignParentBottom="true"
+        android:textSize="12dp" />
 
 </RelativeLayout>

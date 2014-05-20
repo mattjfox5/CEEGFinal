@@ -17,27 +17,25 @@
         android:layout_marginTop="60dp"
         android:text="Disclaimer Text" />
 
-    <Button
-        android:id="@+id/agree"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
-        android:textSize="16dp"
-        android:text="I agree to the terms and conditions" 
-   		/>
+       <Button
+           android:id="@+id/agree"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
+           android:layout_centerHorizontal="true"
+           android:layout_marginBottom="30dp"
+           android:text="I agree to the terms and conditions"
+           android:textSize="16dp" />
 
        <Button
-        android:id="@+id/fullText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="150dp"
-        android:textSize="16dp"
-        android:text="See full text of paper"
-        android:onClick="FullText"
-        />
+           android:id="@+id/fullText"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_above="@+id/agree"
+           android:layout_centerHorizontal="true"
+           android:layout_marginBottom="20dp"
+           android:onClick="FullText"
+           android:text="See full text of paper"
+           android:textSize="16dp" />
 
 </RelativeLayout>

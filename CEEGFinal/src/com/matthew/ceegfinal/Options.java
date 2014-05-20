@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.RelativeLayout;
 import android.os.Build;
 
 public class Options extends Activity {
@@ -17,17 +19,21 @@ public class Options extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		RelativeLayout layout = new RelativeLayout(this);
+		layout.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
 		Intent intent = getIntent();
-		if(intent.getBooleanExtra("CEEG", false))
-			setContentView(R.layout.recommended);
-		else
-			setContentView(R.layout.optional);
-		
+		if(intent.getBooleanExtra("CEEG", false)) {
 
-		if (savedInstanceState == null) {
-			getFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
-		}
+			GifWebView w = new GifWebView(this, "file:///android_asset/animation1.gif");
+			w.setScrollContainer(false);
+			RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+			params.addRule(RelativeLayout.CENTER_IN_PARENT);
+			w.setLayoutParams(params);
+			layout.addView(w);
+			setContentView(layout);
+			
+		} else
+			setContentView(R.layout.optional);
 		
 		
 	}
@@ -40,27 +46,8 @@ public class Options extends Activity {
 		return true;
 	}
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
-
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
-	public static class PlaceholderFragment extends Fragment {
-
-		public PlaceholderFragment() {
-		}
-
+	
 	
 	}
 
-}
+
