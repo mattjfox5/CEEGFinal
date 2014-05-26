@@ -15,8 +15,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="Disclaimer Text" />
-
+        android:text="DISCLAIMER: This is app is meant to complement the model developed in the manuscript, “Development and validation of a seizure prediction model in critically ill children” by Yang, et al. 2014. (link to article) The user is assumed to have read and understood the limitations of the model and is familiar with the use of continuous EEG. This model has several limitations and is not meant to substitute for rigorous clinical evaluation. No medical decision should be based solely on the results of this program. The creators of this app take no responsibility for its use in clinical practice." 
+        android:textSize="16dp"/>
+		
        <Button
            android:id="@+id/agree"
            android:layout_width="wrap_content"

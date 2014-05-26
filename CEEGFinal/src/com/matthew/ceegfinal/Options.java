@@ -11,8 +11,10 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.os.Build;
@@ -36,6 +38,27 @@ public class Options extends Activity {
 			RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
 			params.addRule(RelativeLayout.CENTER_IN_PARENT);
 			w.setLayoutParams(params);
+			
+			
+			Button reset = new Button (this);
+			reset.setText("Reset");
+			reset.setTextSize(20);
+			RelativeLayout.LayoutParams p = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+			p.addRule(RelativeLayout.CENTER_HORIZONTAL);
+			p.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+			
+			reset.setLayoutParams(p);
+			 reset.setOnClickListener(new OnClickListener () {
+
+				@Override
+				public void onClick(View v) {
+					Intent i = new Intent(Options.this, Disclaimer.class);
+					startActivity(i);
+				}
+				 
+				 
+				 
+			 });
 			
 			
 			textview1 = new TextView(this);
@@ -64,6 +87,7 @@ public class Options extends Activity {
 			layout.addView(textview1);
 			layout.addView(textview12);
 			layout.addView(w);
+			layout.addView(reset);
 			setContentView(layout);
 			
 		} else {
@@ -76,8 +100,25 @@ public class Options extends Activity {
 			params.addRule(RelativeLayout.CENTER_IN_PARENT);
 			ww.setLayoutParams(params);
 			
+			Button reset = new Button (this);
+			reset.setText("Reset");
+			reset.setTextSize(20);
+			RelativeLayout.LayoutParams p = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+			p.addRule(RelativeLayout.CENTER_HORIZONTAL);
+			p.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 			
-			
+			reset.setLayoutParams(p);
+			 reset.setOnClickListener(new OnClickListener () {
+
+				@Override
+				public void onClick(View v) {
+					Intent i = new Intent(Options.this, Disclaimer.class);
+					startActivity(i);
+				}
+				 
+				 
+				 
+			 });
 			
 			
 			textview1 = new TextView(this);
@@ -91,23 +132,7 @@ public class Options extends Activity {
 			textview1.setLayoutParams(paramss);
 			
 			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+						
 			
 			TextView textview1222 = new TextView(this);
 			textview1222.setText("OPTIONAL");
@@ -121,23 +146,17 @@ public class Options extends Activity {
 			textview1222.setLayoutParams(paramssss);
 			
 			
-			
-			
-			
-			
-			
-			
-			
+						
 			
 			layout2.addView(textview1);
 			layout2.addView(textview1222);
 			layout2.addView(ww);
+			layout2.addView(reset);
 			setContentView(layout2);
 			
 			
 			
-			
-			
+					
 			
 		
 		

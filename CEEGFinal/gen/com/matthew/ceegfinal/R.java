@@ -1096,7 +1096,7 @@ containing a value of this type.
         public static final int IEDRadioGroup=0x7f050058;
         public static final int IEDYes=0x7f050059;
         public static final int Instructions=0x7f05003f;
-        public static final int OL=0x7f050041;
+        public static final int OL=0x7f050042;
         public static final int RL=0x7f050044;
         public static final int S_D=0x7f05005d;
         public static final int action_bar=0x7f05001c;
@@ -1172,7 +1172,7 @@ containing a value of this type.
         public static final int ssGroup=0x7f050045;
         public static final int submit_area=0x7f050039;
         public static final int tabMode=0x7f050002;
-        public static final int textView1=0x7f050042;
+        public static final int textView1=0x7f050041;
         public static final int textView2=0x7f050043;
         public static final int textView3=0x7f050053;
         public static final int textView4=0x7f050057;

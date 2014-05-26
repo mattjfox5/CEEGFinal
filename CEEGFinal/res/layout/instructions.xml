@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="128dp"
+        android:textSize="35dp"
         android:text="Instructions" />
 
     <Button
@@ -25,6 +25,18 @@
         android:layout_centerHorizontal="true"
         android:textSize="20dp"
         android:text="Continue" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Instructions"
+        android:layout_centerHorizontal="true"
+        android:text="On the following screens, you will need to set the sensitivity and specificity of the model. A sensitivity of 59% and specificity of 81% is recommended. The subsequent screen will ask a series of 4 questions about the clinical picture and EEG as variables for the model. The final screen will then list if continuous EEG is recommended or would be optional based on this model. 
+
+Please refer to the article for the limitations of this model.
+" 
+android:textSize="18dp"/>
 
 </RelativeLayout>
 
