@@ -20,6 +20,8 @@ public class Settings1 extends ActionBarActivity {
 	 @Override
 	    protected void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
+	        android.app.ActionBar actionBar = getActionBar();
+	        actionBar.hide();
 	        setContentView(R.layout.settings1);
 	        Button Back01 = (Button) findViewById(R.id.Back01);
 	        Button Continue02 = (Button) findViewById (R.id.Continue02);

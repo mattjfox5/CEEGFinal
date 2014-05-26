@@ -20,7 +20,8 @@ public class Instructions extends ActionBarActivity {
 	    protected void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
 	        setContentView(R.layout.instructions);
-	        
+	        android.app.ActionBar actionBar = getActionBar();
+	        actionBar.hide();
 	        Button Continue01 = (Button) findViewById(R.id.Continue01);
 	        
 	        Continue01.setOnClickListener(new OnClickListener() {

@@ -15,24 +15,25 @@ import android.os.Build;
 public class Settings2 extends ActionBarActivity {
 
 	double score;
-	static Spinner  spinner1;
+	static RadioGroup b;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.settings2);
 		Button Back02 = (Button) findViewById(R.id.Back02);
-		final Switch Age = (Switch) findViewById (R.id.Age);
-		final Switch CSP = (Switch) findViewById (R.id.CSP);
-		final Switch IED = (Switch) findViewById (R.id.IED);
-		spinner1 = (Spinner)findViewById(R.id.spinner1);
+		final RadioGroup age = (RadioGroup) findViewById (R.id.ageRadioGroup);
+		final RadioGroup CSP = (RadioGroup) findViewById (R.id.priorRadioGroup);
+		final RadioGroup IED = (RadioGroup) findViewById (R.id.IEDRadioGroup);
+		b = (RadioGroup) findViewById (R.id.backgroundRadioGroup);
 		Button Calc = (Button) findViewById (R.id.Calc);
-		
+		android.app.ActionBar actionBar = getActionBar();
+        actionBar.hide();
 		Calc.setOnClickListener(new OnClickListener(){
 			
 			
 			public void onClick(View v) {
 				Intent iiiiiii = new Intent (Settings2.this, Options.class);
-				if(getModelScore(Age.isChecked(), CSP.isChecked(), getString(), IED.isChecked()) > score)
+				if(getModelScore(age.getCheckedRadioButtonId() == R.id.less, CSP.getCheckedRadioButtonId() == R.id.priorYes, getString(), IED.getCheckedRadioButtonId() == R.id.IEDYes )> score)
 					iiiiiii.putExtra("CEEG", true);
 				else
 					iiiiiii.putExtra("CEEG", false);
@@ -40,14 +41,7 @@ public class Settings2 extends ActionBarActivity {
 			
 			}});
 		
-		List<String> values = new ArrayList<String>();
-		values.add("Slow and Discontinuous");
-		values.add("Discontinuous");
-		values.add("Burst Suppression");
-		values.add("Attenuated and Featureless");
 		
-		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, values);
-		spinner1.setAdapter(dataAdapter);
 		Back02.setOnClickListener(new OnClickListener(){
 
 			@Override
@@ -85,27 +79,20 @@ public class Settings2 extends ActionBarActivity {
 		return super.onOptionsItemSelected(item);
 	}
 
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
-	public static class PlaceholderFragment extends Fragment {
-
-		public PlaceholderFragment() {
-		}
 
 		
-	}
+	
 	
 	public static String getString() {
-		switch(spinner1.getSelectedItem().toString())
+		switch( b.getCheckedRadioButtonId())
 		{
-		case "Slow and Discontinuous":
+		case R.id.S_D:
 			return "s and d";
-		case "Discontinuous":
+		case R.id.D:
 			return "d";
-		case "Burst Suppression":
+		case R.id.B_S:
 			return "bs";
-		case "Attenuated and Featureless":
+		case R.id.A_F:
 			return "a and f";
 			
 		}
@@ -225,5 +212,5 @@ public class Settings2 extends ActionBarActivity {
 		}
 		return -1;
 	}
+	}
 
-}

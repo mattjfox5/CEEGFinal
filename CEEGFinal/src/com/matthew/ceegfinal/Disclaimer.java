@@ -19,7 +19,8 @@ public class Disclaimer extends ActionBarActivity {
 	        super.onCreate(savedInstanceState);
 	        setContentView(R.layout.disclaimer);
 	        Button agree = (Button) findViewById(R.id.agree);
-	        
+	        ActionBar actionBar = getActionBar();
+	        actionBar.hide();
 	        agree.setOnClickListener(new View.OnClickListener() {
 
 				@Override
