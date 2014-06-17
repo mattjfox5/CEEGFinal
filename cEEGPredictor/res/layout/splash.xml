@@ -3,63 +3,46 @@
     android:background="#f0f0f0f0"
     android:layout_height="fill_parent" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:paddingBottom="20dp"
-        android:paddingTop="30dp"
-        android:text="cEEG Predictor"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="40dp" 
-        android:gravity="center"/>
-
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:paddingBottom="20dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
         android:src="@drawable/a" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView1"
-        android:layout_centerHorizontal="true"
-        android:text="Created in association with:"
-        android:gravity="center"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:paddingBottom="5dp" 
-        android:textSize="25dp" />
-    
-    
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:text="Dr. Kevin Chapman, M.D."
-        android:gravity="center"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:paddingBottom="20dp"
-        android:textSize="25dp" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:paddingBottom="20dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
         android:src="@drawable/company_logo" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:text="cEEG Predictor"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Created in association with the Pediatric Critical Care EEG Group"
+        android:textSize="20dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>

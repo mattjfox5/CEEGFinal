@@ -73,6 +73,11 @@
             android:textSize="20dp"/>
 
     </RadioGroup>
+    <View
+    android:layout_width="fill_parent"
+    android:layout_height="1dip"
+    android:layout_alignBottom="@+id/ageRadioGroup"
+    android:background="#000000" />
     
      <TextView
          android:id="@+id/textView3"
@@ -111,6 +116,11 @@
 
       
     </RadioGroup>
+    <View
+    android:layout_width="fill_parent"
+    android:layout_height="1dip"
+   android:layout_alignBottom="@+id/textView3"
+    android:background="#000000" />
 
  <TextView
      android:id="@+id/textView4"
@@ -148,6 +158,11 @@
             android:textSize="20dp"/>
         
          </RadioGroup>
+         <View
+    android:layout_width="fill_parent"
+    android:layout_height="1dip"
+    android:layout_alignBottom="@+id/textView4"
+    android:background="#000000" />
         
      	<TextView
      	    android:id="@+id/textView5"
@@ -201,6 +216,9 @@
             android:text="Attenuated and Featureless" 
             android:textSize="20dp"/>
          </RadioGroup>
+         
+
+   
 
 </RelativeLayout>
 </ScrollView>
